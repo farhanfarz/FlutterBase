@@ -1,0 +1,42 @@
+name: flutter_base
+description: Everything to get started for a Flutter project
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+  flutter: 3.3.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+  bloc: ^8.0.2
+  flutter_bloc: ^8.0.1
+  flutter_screenutil: ^5.0.0+2
+  get_it: any
+  shared_preferences: ^2.0.6
+  rxdart: ^0.26.0
+  tuple: ^2.0.0
+  graphql_flutter: ^5.0.0
+  #geolocator: any
+  connectivity: ^3.0.6
+  sembast: ^3.1.0+2
+  json_annotation: ^4.0.0
+  encrypt: ^5.0.1
+  #flutter_spinkit: ^4.1.2+1
+  dio: ^4.0.0
+  equatable: ^2.0.3
+  path_provider: ^2.0.9
+  provider: ^6.0.2
+  ninja: ^3.0.2
+  modal_bottom_sheet: ^2.0.0
+  flutter_svg: ^1.0.3
+  build_runner: ^2.1.1
+  cupertino_tabbar: ^2.0.0
+  cached_network_image: ^3.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: ^0.3.0
+  very_good_analysis: ^3.1.0
