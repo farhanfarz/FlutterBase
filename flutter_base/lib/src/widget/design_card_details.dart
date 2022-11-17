@@ -1,17 +1,8 @@
 import 'design.dart';
 
 class DesignCardDetails extends StatelessWidget {
-  final String? imagePath;
-  final String? title;
-  final TextStyle? titleStyle;
-  final String? subTitle;
-  final TextStyle? subTitleStyle;
-  final double? imageHeight;
-  final EdgeInsets? padding;
-  final EdgeInsets? textPadding;
-
   const DesignCardDetails({
-    Key? key,
+    super.key,
     this.title,
     this.subTitle,
     this.imagePath,
@@ -20,7 +11,16 @@ class DesignCardDetails extends StatelessWidget {
     this.textPadding,
     this.titleStyle,
     this.subTitleStyle,
-  }) : super(key: key);
+  });
+
+  final String? imagePath;
+  final String? title;
+  final TextStyle? titleStyle;
+  final String? subTitle;
+  final TextStyle? subTitleStyle;
+  final double? imageHeight;
+  final EdgeInsets? padding;
+  final EdgeInsets? textPadding;
 
   @override
   Widget build(BuildContext context) {

@@ -1,4 +1,4 @@
-import 'base.dart';
+import 'package:flutter_base/src/base/base.dart';
 
 abstract class LifecycleAwareState<T extends StatefulWidget> extends State<T>
     with WidgetsBindingObserver, RouteAware {
@@ -15,7 +15,7 @@ abstract class LifecycleAwareState<T extends StatefulWidget> extends State<T>
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance?.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
     _isResumed = true;
     _isAppInFg = true;
     _isCovered = false;
@@ -36,7 +36,7 @@ abstract class LifecycleAwareState<T extends StatefulWidget> extends State<T>
     super.dispose();
 
     _unsubscribeFromStates();
-    WidgetsBinding.instance?.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
 
     if (_isResumed) {
       onPaused();
@@ -68,7 +68,7 @@ abstract class LifecycleAwareState<T extends StatefulWidget> extends State<T>
   }
 
   void _notifyStateChanged() {
-    var isResumed = _isAppInFg && !_isCovered && mounted;
+    final isResumed = _isAppInFg && !_isCovered && mounted;
     if (isResumed != _isResumed) {
       if (isResumed) {
         onResumed();

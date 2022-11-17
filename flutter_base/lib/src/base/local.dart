@@ -1,4 +1,5 @@
 import 'base.dart';
+import 'package:graphql/client.dart';
 
 const String VERSION = '';
 const String LOCAL_STORAGE_KEY = '';

@@ -1,4 +1,4 @@
-import 'base.dart';
+import 'package:flutter_base/src/base/base.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 
 String? uuidFromObject(Object object) {
@@ -22,6 +22,7 @@ ValueNotifier<GraphQLClient> getClient() {
 /// We use the cache for all state management.
 class ClientProvider extends StatelessWidget {
   ClientProvider({
+    Key? key,
     required this.child,
     required String uri,
     String? subscriptionUri,
